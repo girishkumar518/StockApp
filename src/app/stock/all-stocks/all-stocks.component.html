@@ -49,7 +49,7 @@
             <td>{{stock.lowPrice}}</td>
             <td>{{stock.faceValue}}</td>
             <td>{{stock.bookValue}}</td>
-            <td>{{stock.lastUpdate}}</td>
+            <td>{{stock.lastUpdate | date : 'MMM d, y h:mm:ss' : timezone}}</td>
             <td>
              <button type="button" class="btn btn-success" (click)="editStockPage(stock)">Edit</button>
              <button type="button" class="btn btn-danger" (click)="deleteStock(stock)">Delete</button>
